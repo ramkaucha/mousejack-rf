@@ -9,6 +9,7 @@ with open(filename) as f:
 
 counts = Counter(pkts)
 for pkt, cnt in counts.items():
-    print(pkt)
     if cnt > 1:
         print(f"{pkt[:8]}... repeated {cnt} times")
+    else:
+        print("No repetition detected")
